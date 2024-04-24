@@ -1,0 +1,72 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #faf6eb
+}
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between; /* Space out header content and navigation */
+    align-items: center; /* Vertically center header content */
+}
+
+#navigation-container {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+	position: absolute; top:0; right:0;
+	margin-right: 150px; /* Only left margin for spacing between nav items */
+}
+
+
+main {
+    flex: 1; /* Flex grow to take available space, pushing footer down */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    padding: 20px;
+}
+
+
+#canvas-container {
+    border: 2px solid black;
+}
+
+#tool-container {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 100px;
+    display: flex;
+    flex-direction: column; /* This will stack the child elements vertically */
+    align-items: flex-start; /* Align items to the start of the container (left side) */
+}
+
+#tool-container button, 
+#tool-container input[type="color"] {
+    margin-bottom: 20px; /* Adds space between each tool */
+}
+
+#tool-container label {
+    display: block; /* Makes the label a block element, forcing the input onto a new line */
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+#contact-info {
+    margin-top: auto; /* Push the contact info to the bottom */
+}

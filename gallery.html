@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+	  <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="galleryStyle.css">
+</head>
+
+<body>
+    <header>
+    <h1>Gallery</h1>
+    <nav>
+		<!-- Nav links -->
+        <ul id="navigation">
+            <li><a href="art.html">Canvas</a></li>
+			<li><a href="home.html">Home</a></li>
+        </ul>
+    </nav>
+</header>
+	
+<main>
+   <div id="gallery-container"></div>
+
+    <script>
+        window.onload = function() {
+            const galleryContainer = document.getElementById('gallery-container');
+            const gallery = JSON.parse(sessionStorage.getItem('gallery')) || [];
+
+            gallery.forEach(dataUrl => {
+                const img = new Image();
+                img.src = dataUrl;
+                img.alt = "Canvas Artwork";
+                galleryContainer.appendChild(img);
+            });
+
+            // Optional: Display a message if the gallery is empty
+            if (gallery.length === 0) {
+                galleryContainer.innerHTML = '<p>No images saved in this session.</p>';
+            }
+        };
+    </script>
+</main>
+</body>
+</html>

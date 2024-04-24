@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="artStyle.css">
+</head>
+
+<!-- Nav links -->
+<div id="navigation-container">
+    <nav>
+        <ul id="navigation">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+    </nav>
+</div>
+
+<body>
+	<main>
+		<div id="canvas-container">
+			<!-- Canvas inserted here -->
+		</div>
+    
+		<div id="button-container">
+		<button id="download-btn">Download</button>
+		<button id="save-to-gallery-btn">Save to Gallery</button>
+		</div>
+
+		<div id="tool-container">
+		Color: <input type="color" id="colorPicker" value="#000000">
+		<button id="pen">Pen</button>
+		<button id="eraser">Eraser</button>
+		</div>
+    
+		<script src="sketch.js"></script>
+	</main>	
+</body>
+</html>
